@@ -24,6 +24,7 @@ WORKDIR /app/frontend
 # Installer Node.js et les dépendances frontend
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install -y nodejs \
+    && ls -la \
     && npm install \
     && npm run build
 
