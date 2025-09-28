@@ -104,10 +104,10 @@ export function Navbar() {
   const handleOverlayClick = () => setIsDrawerOpen(false);
 
   const logoSrc = !mounted
-    ? '/kortix-logo.svg'
+    ? '/kortix-logo2.svg'
     : resolvedTheme === 'dark'
-      ? '/kortix-logo-white.svg'
-      : '/kortix-logo.svg';
+      ? '/kortix-logo-white2.png'
+      : '/kortix-logo2.png';
 
   return (
     <header
@@ -135,7 +135,7 @@ export function Navbar() {
               <Link href="/" className="flex items-center gap-3">
                 <Image
                   src={logoSrc}
-                  alt="Kortix Logo"
+                  alt="Vicia Logo"
                   width={80}
                   height={14}
                   className="md:w-[100px] md:h-[18px]"
@@ -153,18 +153,18 @@ export function Navbar() {
             <div className="flex items-center justify-end flex-shrink-0 w-auto md:w-[200px] ml-auto">
               <div className="flex flex-row items-center gap-2 md:gap-3 shrink-0">
                 <div className="flex items-center space-x-3">
-                  <Link
+                   {/* <Link
                     href="https://github.com/kortix-ai/suna"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hidden md:flex items-center gap-1.5 h-7 px-2.5 text-xs font-medium rounded-full bg-transparent text-muted-foreground/60 hover:text-muted-foreground hover:bg-accent/30 transition-all duration-200"
                     aria-label="GitHub Repository"
                   >
-                    <Github className="size-3.5" />
+                   <Github className="size-3.5" />
                     <span className={`text-xs font-medium transition-opacity duration-200 ${starsLoading ? 'opacity-50' : 'opacity-100'}`}>
                       {formattedStars}
                     </span>
-                  </Link>
+                  </Link>*/}
                   {user ? (
                     <Link
                       className="bg-secondary h-8 hidden md:flex items-center justify-center text-sm font-normal tracking-wide rounded-full text-primary-foreground dark:text-secondary-foreground w-fit px-4 shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] border border-white/[0.12]"
@@ -225,7 +225,7 @@ export function Navbar() {
                   <Link href="/" className="flex items-center gap-3">
                     <Image
                       src={logoSrc}
-                      alt="Kortix Logo"
+                      alt="Vicia Logo"
                       width={120}
                       height={22}
                       priority
@@ -291,7 +291,7 @@ export function Navbar() {
                 </motion.ul>
 
                 {/* GitHub link for mobile */}
-                <Link
+               {/*  <Link
                   href="https://github.com/kortix-ai/suna"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -302,7 +302,7 @@ export function Navbar() {
                   <span className={`text-xs font-medium transition-opacity duration-200 ${starsLoading ? 'opacity-50' : 'opacity-100'}`}>
                     ⭐ {formattedStars}
                   </span>
-                </Link>
+                </Link>*/}
 
                 {/* Action buttons */}
                 <div className="flex flex-col gap-2">

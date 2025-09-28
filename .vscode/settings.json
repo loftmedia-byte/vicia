@@ -1,4 +1,9 @@
 {
-  "python.analysis.typeCheckingMode": "off",
-  "cursorpyright.analysis.typeCheckingMode": "off"
+    "python.defaultInterpreterPath": "/Users/fleurykoyo/Documents/LoftAI/Vicia/suna/backend/.venv/bin/python3",
+    "python.terminal.activateEnvironment": true,
+    "python.analysis.extraPaths": [
+        "/Users/fleurykoyo/Documents/LoftAI/Vicia/suna/backend"
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic"
 }

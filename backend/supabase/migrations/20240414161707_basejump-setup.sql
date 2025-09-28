@@ -19,6 +19,8 @@
   * -------------------------------------------------------
  */
 
+-- Ensure pgcrypto extension is properly installed
+DROP EXTENSION IF EXISTS pgcrypto CASCADE;
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
 -- revoke execution by default from public

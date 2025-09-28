@@ -64,8 +64,8 @@ export function KortixEnterpriseModal({
             <div className="relative z-10 flex flex-col h-full">
               <div className="mb-6 flex-shrink-0">
                 <Image
-                  src={isDarkMode ? '/kortix-logo-white.svg' : '/kortix-logo.svg'}
-                  alt="Kortix Logo"
+                  src={isDarkMode ? '/kortix-logo-white2.png' : '/kortix-logo2.png'}
+                  alt="Vicia Logo"
                   width={80}
                   height={28}
                   className="h-7 w-auto"
@@ -119,7 +119,7 @@ export function KortixEnterpriseModal({
             <div className="h-full overflow-auto">
               <Cal
                 namespace="enterprise-demo"
-                calLink="team/kortix/enterprise-demo"
+                calLink="vicia/30min"
                 style={{ width: '100%', height: '100%' }}
                 config={{
                   layout: 'month_view',

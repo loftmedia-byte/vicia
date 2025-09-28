@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import { Icons } from '@/components/home/icons';
 
 export function FooterSection() {
   const tablet = useMediaQuery('(max-width: 1024px)');
@@ -20,10 +21,10 @@ export function FooterSection() {
   }, []);
 
   const logoSrc = !mounted
-    ? '/kortix-logo.svg'
+    ? '/kortix-logo2.png'
     : resolvedTheme === 'dark'
-      ? '/kortix-logo-white.svg'
-      : '/kortix-logo.svg';
+      ? '/kortix-logo-white2.png'
+      : '/kortix-logo2.png';
 
   return (
     <footer id="footer" className="w-full pb-0 px-6">
@@ -34,7 +35,7 @@ export function FooterSection() {
               <Link href="/" className="flex items-center gap-2">
                 <Image
                   src={logoSrc}
-                  alt="Kortix Logo"
+                  alt="Vicia Logo"
                   width={122}
                   height={22}
                   priority
@@ -46,7 +47,7 @@ export function FooterSection() {
 
               <div className="flex items-center gap-4">
             <a
-              href="https://github.com/kortix-ai/suna"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -63,7 +64,7 @@ export function FooterSection() {
               </svg>
             </a>
             <a
-              href="https://x.com/kortixai"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X (Twitter)"
@@ -80,7 +81,7 @@ export function FooterSection() {
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com/company/kortix/"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -97,7 +98,7 @@ export function FooterSection() {
               </svg>
             </a>
               </div>
-              {/* <div className="flex items-center gap-2 dark:hidden">
+               <div className="flex items-center gap-2 dark:hidden">
                 <Icons.soc2 className="size-12" />
                 <Icons.hipaa className="size-12" />
                 <Icons.gdpr className="size-12" />
@@ -106,7 +107,7 @@ export function FooterSection() {
                 <Icons.soc2Dark className="size-12" />
                 <Icons.hipaaDark className="size-12" />
                 <Icons.gdprDark className="size-12" />
-              </div> */}
+              </div> 
             </div>
             <div className="pt-5 md:w-1/2">
           <div className="flex flex-col items-start justify-start md:flex-row md:items-center md:justify-between gap-y-5 lg:pl-10">
@@ -134,7 +135,7 @@ export function FooterSection() {
         </div>
       </div>
       <Link
-        href="https://www.youtube.com/watch?v=nuf5BF1jvjQ"
+        href="#"
         target="_blank"
         rel="noopener noreferrer"
         className="block w-full h-48 md:h-64 relative mt-24 z-0 cursor-pointer"

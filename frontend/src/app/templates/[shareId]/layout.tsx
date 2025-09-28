@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ shareId: 
     };
   } catch (error) {
     return {
-      title: 'AI Agent Template | Kortix Suna',
+      title: 'AI Agent Template | Vicia',
       description: 'Discover and install AI agent templates to enhance your workflow with powerful automation capabilities.',
       openGraph: {
         title: 'AI Agent Template | Kortix Suna',
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ shareId: 
             url: `${process.env.NEXT_PUBLIC_URL}/share-page/og-fallback.png`,
             width: 1200,
             height: 630,
-            alt: 'Kortix Suna AI Agent Template',
+            alt: 'Vicia AI Agent Template',
           }
         ],
       },

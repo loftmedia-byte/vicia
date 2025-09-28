@@ -32,6 +32,7 @@ export default function Home() {
             <CapabilitiesSection />
             {/* <DeliverablesSection />             */}
             <BentoSection />
+            {/* <UseCasesSection /> */}
             
             {/* <AgentShowcaseSection /> */}
             <OpenSourceSection />

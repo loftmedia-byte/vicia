@@ -162,7 +162,7 @@ async def create_template_from_agent(
         logger.warning(f"Template creation failed - Suna default agent: {e}")
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
-        logger.error(f"Error creating template from agent {request.agent_id}: {e}", exc_info=True)
+        logger.error(f"Error creating template from agent {request.agent_id}: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
@@ -191,7 +191,7 @@ async def publish_template(
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Error publishing template {template_id}: {e}", exc_info=True)
+        logger.error(f"Error publishing template {template_id}: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
@@ -219,7 +219,7 @@ async def unpublish_template(
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Error unpublishing template {template_id}: {e}", exc_info=True)
+        logger.error(f"Error unpublishing template {template_id}: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
@@ -247,7 +247,7 @@ async def delete_template(
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Error deleting template {template_id}: {e}", exc_info=True)
+        logger.error(f"Error deleting template {template_id}: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
@@ -308,7 +308,7 @@ async def install_template(
         logger.warning(f"Template installation failed - invalid credentials: {e}")
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
-        logger.error(f"Error installing template {request.template_id}: {e}", exc_info=True)
+        logger.error(f"Error installing template {request.template_id}: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
@@ -393,7 +393,7 @@ async def get_marketplace_templates(
         )
         
     except Exception as e:
-        logger.error(f"Error getting marketplace templates: {e}", exc_info=True)
+        logger.error(f"Error getting marketplace templates: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
@@ -447,7 +447,7 @@ async def get_my_templates(
         )
         
     except Exception as e:
-        logger.error(f"Error getting templates for user {user_id}: {e}", exc_info=True)
+        logger.error(f"Error getting templates for user {user_id}: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
@@ -488,7 +488,7 @@ async def get_public_template(template_id: str):
         # Re-raise HTTP exceptions as-is
         raise http_exc
     except Exception as e:
-        logger.error(f"Unexpected error getting public template {template_id}: {e}", exc_info=True)
+        logger.error(f"Unexpected error getting public template {template_id}: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
@@ -510,7 +510,7 @@ async def get_template(
         logger.warning(f"Access denied to template {template_id} for user {user_id}: {e}")
         raise HTTPException(status_code=403, detail="Access denied to template")
     except Exception as e:
-        logger.error(f"Error getting template {template_id}: {e}", exc_info=True)
+        logger.error(f"Error getting template {template_id}: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 

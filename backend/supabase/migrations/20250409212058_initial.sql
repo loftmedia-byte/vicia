@@ -1,4 +1,5 @@
 -- Enable UUID extension
+DROP EXTENSION IF EXISTS "uuid-ossp" CASCADE;
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- Create devices table first

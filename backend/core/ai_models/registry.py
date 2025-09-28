@@ -1,8 +1,8 @@
 from typing import Dict, List, Optional, Set
 from .ai_models import Model, ModelProvider, ModelCapability, ModelPricing
 
-DEFAULT_FREE_MODEL = "Kimi K2"
-DEFAULT_PREMIUM_MODEL = "Claude Sonnet 4"
+DEFAULT_FREE_MODEL = "openai/gpt-5-mini"
+DEFAULT_PREMIUM_MODEL = "openai/gpt-5-mini"
 
 class ModelRegistry:
     def __init__(self):
@@ -70,7 +70,27 @@ class ModelRegistry:
             tier_availability=["paid"],
             priority=98,
             enabled=True
-        ))        
+        ))
+
+        # Meta Llama 3.1 8B Free version via OpenRouter
+        self.register(Model(
+            id="openrouter/meta-llama/llama-3.1-8b-instruct:free",
+            name="Llama 3.1 8B (Free)",
+            provider=ModelProvider.OPENROUTER,
+            aliases=["meta-llama/llama-3.1-8b-instruct:free", "llama-3.1-8b", "Llama 3.1 8B Free", "openrouter/meta-llama/llama-3.1-8b-instruct:free"],
+            context_window=128_000,
+            capabilities=[
+                ModelCapability.CHAT,
+                ModelCapability.FUNCTION_CALLING,
+            ],
+            pricing=ModelPricing(
+                input_cost_per_million_tokens=0.00,
+                output_cost_per_million_tokens=0.00
+            ),
+            tier_availability=["free"],
+            priority=99,
+            enabled=True
+        ))
         
         # self.register(Model(
         #     id="anthropic/claude-3-5-sonnet-latest",
@@ -215,6 +235,26 @@ class ModelRegistry:
             enabled=False  # Currently disabled
         ))
         """
+        
+        # Meta Llama 3.1 8B Free version via OpenRouter
+        self.register(Model(
+            id="openrouter/meta-llama/llama-3.1-8b-instruct:free",
+            name="Llama 3.1 8B (Free)",
+            provider=ModelProvider.OPENROUTER,
+            aliases=["meta-llama/llama-3.1-8b-instruct:free", "llama-3.1-8b", "Llama 3.1 8B Free", "openrouter/meta-llama/llama-3.1-8b-instruct:free"],
+            context_window=128_000,
+            capabilities=[
+                ModelCapability.CHAT,
+                ModelCapability.FUNCTION_CALLING,
+            ],
+            pricing=ModelPricing(
+                input_cost_per_million_tokens=0.00,
+                output_cost_per_million_tokens=0.00
+            ),
+            tier_availability=["free"],
+            priority=99,
+            enabled=True
+        ))
     
     def register(self, model: Model) -> None:
         self._models[model.id] = model
