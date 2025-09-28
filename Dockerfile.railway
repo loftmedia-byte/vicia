@@ -15,7 +15,7 @@ WORKDIR /app/backend
 
 # Installer uv et les dépendances Python
 RUN pip install uv
-RUN uv pip install -r requirements.txt
+RUN uv sync --frozen
 
 # Copier les fichiers frontend
 COPY frontend/ ./frontend/
