@@ -1,8 +1,12 @@
 import type { NextConfig } from 'next';
 
 const nextConfig = (): NextConfig => ({
-  // Configuration pour Docker
-  output: (process.env.NEXT_OUTPUT as 'standalone') || undefined,
+  // Configuration pour GitHub Pages
+  output: process.env.NODE_ENV === 'production' ? 'export' : (process.env.NEXT_OUTPUT as 'standalone') || undefined,
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
   
   // Configuration pour gérer les headers volumineux
   experimental: {
